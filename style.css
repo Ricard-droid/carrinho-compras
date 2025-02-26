@@ -1,0 +1,231 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(to bottom, #01080E 10%, #FFF 10%, #FFF 90%, #01080E 90%);
+  padding: 7vh 8vw 5vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+/* Estilização geral dos botões */
+button {
+  background: inherit;
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(24, 117, 232, 0.1);
+}
+
+/* Ajustes para os inputs */
+select {
+  appearance: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Classes de texto */
+.texto-medio-azul {
+  color: #1875E8;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.texto-azul {
+  color: #1875E8;
+}
+
+/* Layout principal */
+.conteudo-principal {
+  filter: drop-shadow(0px 0px 70px rgba(2, 189, 255, 0.40));
+  min-height: 100%;
+  padding: 5rem 6.5rem;
+  display: grid;
+  grid-template-columns: 1.375fr 1fr;
+  column-gap: 5rem;
+  background: white url('./assets/oculos.png') no-repeat bottom left;
+  background-size: auto 40%;
+  position: relative;
+  background-position: left bottom -40px;
+}
+
+.grafismo-azul {
+  position: absolute;
+  width: 31.9375rem;
+  height: 2.0625rem;
+  background-image: url('./assets/grafismo-azul.svg');
+  top: -1rem;
+}
+
+/* Estilo do título */
+.titulo {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 2.5rem;
+}
+
+/* Estilos do formulário */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#produto, #quantidade {
+  width: 100%;
+  max-width: 24.75rem;
+  height: 3.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #1875E8;
+  color: #01080E;
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+#produto {
+  background: url('./assets/arrow-down.svg') no-repeat right 1rem top 50%;
+}
+
+/* Parte inferior do formulário */
+.parte-inferior {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.botoes-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Botões principais */
+.botao-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 3.25rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.botao-adicionar {
+  background: #1E90FF; /* Azul metálico vivo */
+  box-shadow: 0px 0px 20px rgba(30, 144, 255, 0.50);
+  color: #F0F0F0; /* Branco gelo */
+}
+
+.botao-limpar {
+  background: #01080E;
+  box-shadow: 0px 0px 20px rgba(1, 8, 14, 0.50);
+  color: white;
+}
+
+/* Adicionando estilo para o botão "Reiniciar" */
+.botao-reiniciar {
+  background: #2C2C2C; /* Preto fosco */
+  box-shadow: 0px 0px 20px rgba(44, 44, 44, 0.50);
+  color: #F0F0F0; /* Branco gelo */
+}
+
+/* Carrinho de compras */
+.carrinho {
+  display: flex;
+  width: 24rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.titulo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carrinho__titulo {
+  color: #1875E8;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.carrinho__produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carrinho__produtos__produto {
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.divisoria {
+  width: 24rem;
+  height: 1px;
+  background: #000;
+}
+
+.carrinho__total {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+/* Ajuste na seção de produtos */
+.adicionar-produto {
+  padding-bottom: 180px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .conteudo-principal {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    background-size: contain;
+  }
+
+  .botoes-wrapper {
+    flex-direction: column;
+  }
+
+  .botao-form {
+    width: 100%;
+  }
+}
